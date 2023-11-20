@@ -1,0 +1,155 @@
+Name: Alarms
+Type: AlarmsCategoryFolder
+Children:
+- Name: ExclusiveLevelAlarm1
+  Type: ExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/AnalogVariableAllarm"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=15;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=83
+    Direction: Forward
+  - Name: HighHighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 100.0
+  - Name: HighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 90.0
+  - Name: LowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -90.0
+  - Name: LowLowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -100.0
+  - Name: AutoAcknowledge
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    Children:
+    - Name: HighHighStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme alto alto esclusivo"}
+    - Name: HighStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme alto esclusivo"}
+    - Name: LowStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme basso esclusivo"}
+    - Name: LowLowStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme basso basso esclusivo"}
+- Name: NonExclusiveLevelAlarm1
+  Type: NonExclusiveLevelAlarmController
+  Children:
+  - Name: InputValue
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 0.0
+    Children:
+    - Name: DynamicLink
+      Type: DynamicLink
+      DataType: NodePath
+      Value: "../../../Model/AnalogVariableAllarm"
+      Children:
+      - Name: Mode
+        Type: BaseVariableType
+        DataType: DynamicLinkMode
+        Value: 2
+  - Name: LastEvent
+    Type: BaseDataVariableType
+    DataType: BaseDataType
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+  - Class: Reference
+    Target: ns=15;i=81
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=82
+    Direction: Forward
+  - Class: Reference
+    Target: ns=15;i=83
+    Direction: Forward
+  - Name: HighHighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 100.0
+  - Name: HighLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: 90.0
+  - Name: LowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -90.0
+  - Name: LowLowLimit
+    Type: BaseDataVariableType
+    DataType: Double
+    Value: -100.0
+  - Name: AutoAcknowledge
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: AutoConfirm
+    Type: BaseDataVariableType
+    DataType: Boolean
+    Value: true
+  - Name: Message
+    Type: BaseDataVariableType
+    DataType: LocalizedText
+    Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+    Children:
+    - Name: HighHighStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme alto alto NON esclusivo"}
+    - Name: HighStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme alto NON esclusivo"}
+    - Name: LowStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme basso NON esclusivo"}
+    - Name: LowLowStateMessage
+      Type: BaseDataVariableType
+      DataType: LocalizedText
+      Value: {"LocaleId":"en-US","Text":"Allarme basso basso NON esclusivo"}
