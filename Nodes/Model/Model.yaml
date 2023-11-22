@@ -13,3 +13,8 @@ Children:
   Type: BaseDataVariableType
   DataType: Int32
   Value: 0
+- Name: IncognitoMode
+  Type: BaseDataVariableType
+  DataType: Boolean
+  Value: false
+- File: MultiAlias/MultiAlias.yaml

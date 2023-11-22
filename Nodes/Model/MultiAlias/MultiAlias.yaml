@@ -1,0 +1,130 @@
+Name: MultiAlias
+Type: FolderType
+Children:
+- Name: Motore_Settings
+  Id: g=dac31678b8864462330c85c78e72d2c7
+  Supertype: BaseObjectType
+  Children:
+  - Name: Speed_Set
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Frequency_Set
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+- Name: Motore_Status
+  Id: g=18373010f817e768a23e968e4cee6937
+  Supertype: BaseObjectType
+  Children:
+  - Name: Speed_Actual
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Frequency_Actual
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+  - Name: Status
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+- Name: Motore_Settings1
+  Id: g=33381847ffff47588e8a3b4abcfdb26a
+  Type: Motore_Settings
+  Children:
+  - Name: Speed_Set
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 10
+  - Name: Frequency_Set
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 11
+- Name: Motore_Settings2
+  Id: g=3633d091128e2a3a9e782dd4881d2b49
+  Type: Motore_Settings
+  Children:
+  - Name: Speed_Set
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 20
+  - Name: Frequency_Set
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 21
+- Name: Motore_Status1
+  Id: g=009c01699899560dc70b7b2f2c69bd5b
+  Type: Motore_Status
+  Children:
+  - Name: Speed_Actual
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 8
+  - Name: Frequency_Actual
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 9
+  - Name: Status
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+- Name: Motore_Status2
+  Id: g=daf43eca29425309cc3606b767bb0afb
+  Type: Motore_Status
+  Children:
+  - Name: Speed_Actual
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 18
+  - Name: Frequency_Actual
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 19
+  - Name: Status
+    Type: BaseDataVariableType
+    DataType: Int32
+    Value: 0
+- Class: DataType
+  Name: MotorStatus
+  Id: g=6043ae1f8b5440d2de071aa85576c44a
+  Supertype: Enumeration
+  EnumDefinition: 
+   {
+    "Name": "MotorStatus",
+    "DataType": {
+     "IdType": 2,
+     "Id": "6043ae1f8b5440d2de071aa85576c44a",
+     "Namespace": 24
+    },
+    "Fields": [{
+      "Name": "Value0",
+      "Value": 0,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Spento"
+      }
+     },{
+      "Name": "Value1",
+      "Value": 1,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Run"
+      }
+     },{
+      "Name": "Value2",
+      "Value": 2,
+      "DisplayName": {
+       "LocaleId": "en-US",
+       "Text": "Error"
+      }
+     }]
+   }
+  Children:
+  - Name: ns=0;EnumValues
+    Type: BaseDataVariableType
+    DataType: EnumValueType
+    ModellingRule: None
+    ValueRank: OneDimension
+    ArrayDimensions: [0]
+    Value: [{"TypeId":{"Id":7594},"Body":{"Value":0,"DisplayName":{"LocaleId":"en-US","Text":"Spento"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":1,"DisplayName":{"LocaleId":"en-US","Text":"Run"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}},{"TypeId":{"Id":7594},"Body":{"Value":2,"DisplayName":{"LocaleId":"en-US","Text":"Error"},"Description":{"NamespaceIndex":-1,"LocaleId":"","Text":""}}}]

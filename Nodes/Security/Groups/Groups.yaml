@@ -1,2 +1,5 @@
 Name: Groups
 Type: GroupsCategoryFolder
+Children:
+- Name: Group1
+  Type: GroupType

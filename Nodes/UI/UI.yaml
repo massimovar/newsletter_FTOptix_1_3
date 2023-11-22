@@ -6,6 +6,7 @@ Children:
   Type: StyleSheet
   Children:
   - Name: ButtonStyles
+    Id: g=686f2e33a195a73f8eefa7dad3842236
     Type: BaseObjectType
     Children:
     - Name: Default
@@ -139,6 +140,7 @@ Children:
         DataType: Size
         Value: 0.0
   - Name: InputBoxStyles
+    Id: g=c818317cf3a1c24a020937ed75457cf8
     Type: BaseObjectType
     Children:
     - Name: Default
@@ -148,31 +150,126 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         Value: 20.0
+    - Name: InputBoxStyle1
+      Type: InputBoxStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0000ff"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffffff"
   - Name: SwitchStyles
+    Id: g=db28b58f75376650006014270ccff140
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: SwitchStyle
+    - Name: SwitchStyle1
+      Type: SwitchStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#00ff00"
+      - Name: ActiveBackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#008000"
   - Name: GaugeStyles
+    Id: g=7ca335e99008da4428bb136e52f75a65
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: GaugeStyle
+    - Name: GaugeStyle1
+      Type: GaugeStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#808080"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ff0000"
+      - Name: HandleColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0000ff"
   - Name: NavigationPanelStyles
+    Id: g=d2532aa5c994c12194a72f08c71e4ef5
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: NavigationPanelStyle
+    - Name: NavigationPanelStyle1
+      Type: NavigationPanelStyle
+      Children:
+      - Name: InactiveColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffff00"
+      - Name: ActivePrimaryColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffa500"
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#808080"
   - Name: ChartStyles
+    Id: g=40bc58573f3bcef37d7a6b6078f704aa
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: ChartStyle
+    - Name: ChartStyle1
+      Type: ChartStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#b3b3b3"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ff0000"
+      - Name: GridColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffa500"
+      - Name: AxisColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0000ff"
   - Name: DataListStyles
+    Id: g=21cfa28fcc88e0608d624c4c485b359e
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: DataListStyle
+    - Name: DataListStyle1
+      Type: DataListStyle
+      Children:
+      - Name: BackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#e4e4e4"
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#0000ff"
+      - Name: SelectionBackgroundColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ffff00"
+      - Name: SelectionTextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#000000"
   - Name: ToolTipStyles
     Type: BaseObjectType
     Children:
@@ -193,12 +290,15 @@ Children:
     Children:
     - Name: Default
       Type: PieChartStyle
+    - Name: PieChartStyle1
+      Type: PieChartStyle
   - Name: HistogramChartStyles
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: HistogramChartStyle
   - Name: LabelStyles
+    Id: g=61019970860f49bc99d57b76abaa1a9a
     Type: BaseObjectType
     Children:
     - Name: Default
@@ -235,10 +335,26 @@ Children:
         DataType: FontWeightEnum
         Value: 700
   - Name: RadioButtonStyles
+    Id: g=00de624b4c7e61ec733206a7e7f99ad6
     Type: BaseObjectType
     Children:
     - Name: Default
       Type: RadioButtonStyle
+    - Name: OptionButtonStyle1
+      Type: RadioButtonStyle
+      Children:
+      - Name: ActiveColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ff0000"
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 16.0
+      - Name: TextColor
+        Type: BaseDataVariableType
+        DataType: Color
+        Value: "#ee82ee"
   - Name: CheckBoxStyles
     Type: BaseObjectType
     Children:
@@ -584,6 +700,22 @@ Children:
           Type: NodePointer
           DataType: NodeId
           Value: "/Objects/newsletter_FTOptix_1_3/UI/Screens/New_UI_Objects"
+          Children:
+          - Name: Kind
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: Panel10
+        Type: NavigationPanelItem
+        Children:
+        - Name: Title
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        - Name: Panel
+          Type: NodePointer
+          DataType: NodeId
+          Value: {"IdType":2,"Id":"51ade85f42ec0ec6623306806127f6d0","Namespace":24}
           Children:
           - Name: Kind
             Type: PropertyType

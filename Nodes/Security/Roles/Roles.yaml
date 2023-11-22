@@ -1,2 +1,5 @@
 Name: Roles
 Type: RolesCategoryFolder
+Children:
+- Name: Role1
+  Type: ns=1;RoleType
