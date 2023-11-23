@@ -149,7 +149,7 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 20.0
+        Value: 18.0
     - Name: InputBoxStyle1
       Type: InputBoxStyle
       Children:
@@ -307,7 +307,7 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 25.0
+        Value: 22.0
     - Name: RedLabel
       Type: LabelStyle
       Children:
@@ -539,13 +539,12 @@ Children:
   - Name: Width
     Type: BaseDataVariableType
     DataType: Size
-    ModellingRule: Optional
     Value: 1280.0
   - Name: Height
     Type: BaseDataVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 800.0
+    Value: 850.0
   - Name: Caption
     Type: BaseDataVariableType
     DataType: String
