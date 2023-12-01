@@ -307,6 +307,7 @@ Children:
             DataType: NodePath
             Value: "../../../../EventArguments/LocalTime"
 - Name: DataLogger1
+  Id: g=737a8d1825e9abdb22b9e10b8ea96a09
   Type: DataLogger
   Children:
   - Name: SamplingMode
@@ -327,7 +328,8 @@ Children:
     Children:
     - Name: Variable1
       Type: VariableToLog
-      DataType: BaseDataType
+      DataType: Int32
+      Value: 0
       Children:
       - Name: LastValue
         Type: PropertyType
@@ -354,7 +356,8 @@ Children:
           Value: 2
     - Name: Variable2
       Type: VariableToLog
-      DataType: BaseDataType
+      DataType: Int32
+      Value: 0
       Children:
       - Name: LastValue
         Type: PropertyType
