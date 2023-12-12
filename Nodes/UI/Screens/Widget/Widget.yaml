@@ -718,6 +718,7 @@ Children:
       DataType: NodeId
       Value: "/Objects/newsletter_FTOptix_1_3/Model/MultiAlias/Motore_Settings"
   - Name: DropdownButton1
+    Id: g=35d339d3d403677bbcd8555580f3cb9d
     Type: DropDownButton
     Children:
     - Name: Panel
@@ -747,15 +748,13 @@ Children:
     - Name: PanelAliasNode
       Type: BaseDataVariableType
       DataType: NodeId
-      ModellingRule: Optional
       ValueRank: ScalarOrOneDimension
       Value: [{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1}]
       Children:
       - Name: DynamicLink_0
         Type: DynamicLink
         DataType: NodePath
-        ModellingRule: Optional
-        Value: "../../WidgetMotoreStatus@Pointer"
+        Value: "../../WidgetMotoreStatus@NodeId"
         Children:
         - Name: ParentArrayIndex
           Type: BaseVariableType
@@ -765,8 +764,7 @@ Children:
       - Name: DynamicLink_1
         Type: DynamicLink
         DataType: NodePath
-        ModellingRule: Optional
-        Value: "../../WidgetMotoreSettings@Pointer"
+        Value: "../../WidgetMotoreSettings@NodeId"
         Children:
         - Name: ParentArrayIndex
           Type: BaseVariableType

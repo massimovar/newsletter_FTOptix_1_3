@@ -6077,7 +6077,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreStatus@Pointer"
+            Value: "../../WidgetMotoreStatus@NodeId"
         - Name: ns=3;PanelAliasNode_AliasMotoreSettings
           Type: BaseDataVariableType
           DataType: NodeId
@@ -6086,7 +6086,33 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreSettings@Pointer"
+            Value: "../../WidgetMotoreSettings@NodeId"
+        - Name: PanelAliasNode
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ValueRank: ScalarOrOneDimension
+          Value: [{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1}]
+          Children:
+          - Name: DynamicLink_0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreStatus@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 0
+          - Name: DynamicLink_1
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreSettings@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 1
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -6344,7 +6370,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreStatus@Pointer"
+            Value: "../../WidgetMotoreStatus@NodeId"
         - Name: ns=3;PanelAliasNode_AliasMotoreSettings
           Type: BaseDataVariableType
           DataType: NodeId
@@ -6353,7 +6379,33 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreSettings@Pointer"
+            Value: "../../WidgetMotoreSettings@NodeId"
+        - Name: PanelAliasNode
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ValueRank: ScalarOrOneDimension
+          Value: [{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1}]
+          Children:
+          - Name: DynamicLink_0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreStatus@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 0
+          - Name: DynamicLink_1
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreSettings@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 1
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
