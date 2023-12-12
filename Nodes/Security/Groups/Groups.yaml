@@ -1,5 +1,9 @@
 Name: Groups
 Type: GroupsCategoryFolder
 Children:
-- Name: Group1
+- Name: Admin
+  Id: g=3c2795c40a153986711cbd8701dc5fef
+  Type: GroupType
+- Name: Guest
+  Id: g=c89dfba8862f99f94b5ef90a761fd6d6
   Type: GroupType

@@ -360,6 +360,11 @@ Children:
     Children:
     - Name: Default
       Type: CheckBoxStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 20.0
 - Name: NativePresentationEngine
   Type: NativePresentationEngine
   ReferenceType: HasOrderedComponent
@@ -495,16 +500,6 @@ Children:
         DataType: TimeZoneDataType
         ReferenceType: HasProperty
         AccessLevel: Read
-        Value: 
-         {
-          "TypeId": {
-           "Id": 8912
-          },
-          "Body": {
-           "Offset": 0,
-           "DaylightSavingInOffset": false
-          }
-         }
       - Name: Groups
         Type: BaseObjectType
       - Name: Roles
@@ -704,7 +699,7 @@ Children:
             Type: PropertyType
             DataType: NodeId
             Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
-      - Name: Panel10
+      - Name: Panel11
         Type: NavigationPanelItem
         Children:
         - Name: Title
@@ -714,7 +709,7 @@ Children:
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
-          Value: {"IdType":2,"Id":"51ade85f42ec0ec6623306806127f6d0","Namespace":24}
+          Value: "/Objects/newsletter_FTOptix_1_3/UI/Screens/Users_Roles"
           Children:
           - Name: Kind
             Type: PropertyType

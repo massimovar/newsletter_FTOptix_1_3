@@ -136,16 +136,6 @@ Children:
     - Name: LocalTime
       Type: BaseDataVariableType
       DataType: TimeZoneDataType
-      Value: 
-       {
-        "TypeId": {
-         "Id": 8912
-        },
-        "Body": {
-         "Offset": 0,
-         "DaylightSavingInOffset": false
-        }
-       }
   - Name: EventFieldsToLog
     Type: BaseObjectType
     Children:

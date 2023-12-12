@@ -9,7 +9,7 @@ Children:
   Value: 
    {
     "Type": 12,
-    "Dimensions": [18,2],
+    "Dimensions": [37,2],
     "Body": [
      "","en-US",
      "Acknowledge","Acknowledge",
@@ -28,6 +28,25 @@ Children:
      "Severity","Severity",
      "Current State","Current State",
      "Low-low State","Low-low",
-     "Low State","Low"
+     "Low State","Low",
+     "Password","Password",
+     "Login","Login",
+     "Old password","Old password",
+     "LoginChangePasswordFormUnsupportedOperation","Unsupported operation",
+     "New password","New password",
+     "Confirm password","Confirm password",
+     "Change password","Change password",
+     "Current User:","Current User:",
+     "Logout","Logout",
+     "Your password is expired. Please enter a new one","Your password is expired.\nPlease enter a new one.",
+     "LoginFormLoginSuccessful","Login successful",
+     "LoginFormPasswordExpired","Password expired",
+     "LoginFormAuthenticationFailed","Authentication failed",
+     "LoginChangePasswordFormWrongOldPassword","Wrong old password",
+     "LoginChangePasswordFormPasswordAlreadyUsed","Password already used",
+     "LoginChangePasswordFormPasswordChangedTooRecently","Password changed too recently",
+     "LoginChangePasswordFormPasswordTooShort","Password too short",
+     "LoginChangePasswordFormPasswordsDoNotMatch","Passwords do not match",
+     "LoginChangePasswordFormUserNotFound","User not found"
     ]
    }

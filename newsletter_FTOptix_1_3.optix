@@ -97,5 +97,16 @@ Project:
    Uri: 'urn:FTOptix:WebUI:Net'
    Module: FTOptix.WebUI.Net
    Version: 1.1
+ Statistics:
+  TotalNodeCount: 3732
+  Objects: 808
+  ObjectTypes: 29
+  Variables: 2889
+  VariableTypes: 0
+  DataTypes: 1
+  Methods: 5
+  References: 87
+  ReferenceTypes: 0
+  Files: 26
  Nodes:
  - File: Nodes/newsletter_FTOptix_1_3.yaml

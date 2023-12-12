@@ -1,5 +1,9 @@
 Name: Roles
 Type: RolesCategoryFolder
 Children:
-- Name: Role1
+- Name: Maintanance
+  Id: g=2ecc134cd13da0687f332aa17b4b25b0
+  Type: ns=1;RoleType
+- Name: Developers
+  Id: g=ed5e3978f6af574af64b54aa8724effd
   Type: ns=1;RoleType
