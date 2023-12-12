@@ -718,7 +718,6 @@ Children:
       DataType: NodeId
       Value: "/Objects/newsletter_FTOptix_1_3/Model/MultiAlias/Motore_Settings"
   - Name: DropdownButton1
-    Id: g=35d339d3d403677bbcd8555580f3cb9d
     Type: DropDownButton
     Children:
     - Name: Panel
