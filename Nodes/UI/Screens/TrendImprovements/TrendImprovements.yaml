@@ -1750,3 +1750,74 @@ Children:
   Id: g=5cc5c95e6e9c5356997624eb7feac46f
   Supertype: Screen
   ReferenceType: HasComponent
+  Children:
+  - Name: Sparkline1
+    Type: Sparkline
+    Children:
+    - Name: PenValue
+      Type: BaseDataVariableType
+      DataType: BaseDataType
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "/Objects/newsletter_FTOptix_1_3/Loggers/DataLogger1/VariablesToLog/Variable1/LastValue"
+    - Name: TimeWindow
+      Type: BaseDataVariableType
+      DataType: Duration
+      Value: "0:00:02:0.0000000"
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 200.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 60.0
+    - Name: HorizontalAlignment
+      Type: BaseVariableType
+      DataType: HorizontalAlignment
+      ModellingRule: Optional
+      Value: 3
+    - Name: PenThickness
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 3.0
+    - Name: PenColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#ff0000"
+    - Name: YAxisMaximum
+      Type: BaseDataVariableType
+      DataType: Double
+      ModellingRule: Optional
+      Value: 100.0
+    - Name: RangeHigh
+      Type: BaseDataVariableType
+      DataType: Double
+      ModellingRule: Optional
+      Value: 90.0
+    - Name: RangeLow
+      Type: BaseDataVariableType
+      DataType: Double
+      ModellingRule: Optional
+      Value: 10.0
+    - Name: RangeColor
+      Type: BaseDataVariableType
+      DataType: Color
+      ModellingRule: Optional
+      Value: "#ffff00"

@@ -7,6 +7,10 @@ using OpcUa = UAManagedCore.OpcUa;
 using FTOptix.NetLogic;
 using FTOptix.Core;
 using FTOptix.UI;
+using FTOptix.S7TiaProfinet;
+using FTOptix.CommunicationDriver;
+using FTOptix.MicroController;
+using FTOptix.CODESYS;
 #endregion
 
 public class LoginButtonLogic : BaseNetLogic
