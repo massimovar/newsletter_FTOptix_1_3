@@ -2712,6 +2712,11 @@ Children:
               DataType: Color
               ModellingRule: Optional
               Value: "#0fafff"
+            - Name: LeftMargin
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 0.0
           - Name: Rectangle3
             Type: Rectangle
             Children:
@@ -2740,6 +2745,11 @@ Children:
               DataType: Color
               ModellingRule: Optional
               Value: "#0fafff"
+            - Name: LeftMargin
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 0.0
           - Name: Rectangle4
             Type: Rectangle
             Children:
@@ -2768,6 +2778,11 @@ Children:
               DataType: Color
               ModellingRule: Optional
               Value: "#0fafff"
+            - Name: LeftMargin
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 0.0
           - Name: Rectangle5
             Type: Rectangle
             Children:
@@ -2796,6 +2811,11 @@ Children:
               DataType: Color
               ModellingRule: Optional
               Value: "#0fafff"
+            - Name: LeftMargin
+              Type: BaseVariableType
+              DataType: Size
+              ModellingRule: Optional
+              Value: 0.0
           - Name: Wrap
             Type: BaseDataVariableType
             DataType: Boolean
@@ -6077,7 +6097,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreStatus@Pointer"
+            Value: "../../WidgetMotoreStatus@NodeId"
         - Name: ns=3;PanelAliasNode_AliasMotoreSettings
           Type: BaseDataVariableType
           DataType: NodeId
@@ -6086,7 +6106,33 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreSettings@Pointer"
+            Value: "../../WidgetMotoreSettings@NodeId"
+        - Name: PanelAliasNode
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ValueRank: ScalarOrOneDimension
+          Value: [{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1}]
+          Children:
+          - Name: DynamicLink_0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreStatus@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 0
+          - Name: DynamicLink_1
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreSettings@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 1
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -6344,7 +6390,7 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreStatus@Pointer"
+            Value: "../../WidgetMotoreStatus@NodeId"
         - Name: ns=3;PanelAliasNode_AliasMotoreSettings
           Type: BaseDataVariableType
           DataType: NodeId
@@ -6353,7 +6399,33 @@ Children:
           - Name: DynamicLink
             Type: DynamicLink
             DataType: NodePath
-            Value: "../../WidgetMotoreSettings@Pointer"
+            Value: "../../WidgetMotoreSettings@NodeId"
+        - Name: PanelAliasNode
+          Type: BaseDataVariableType
+          DataType: NodeId
+          ValueRank: ScalarOrOneDimension
+          Value: [{"IdType":0,"Id":0,"Namespace":-1},{"IdType":0,"Id":0,"Namespace":-1}]
+          Children:
+          - Name: DynamicLink_0
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreStatus@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 0
+          - Name: DynamicLink_1
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../WidgetMotoreSettings@NodeId"
+            Children:
+            - Name: ParentArrayIndex
+              Type: BaseVariableType
+              DataType: UInt32
+              ValueRank: ScalarOrOneDimension
+              Value: 1
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -6675,7 +6747,7 @@ Children:
                   DataType: String
                   ReferenceType: HasParameter
                   ModellingRule: Optional
-                  Value: "if (({0}&&{1}),true,false) || if (({0}&&{2}),true,false)"
+                  Value: "if ({0}&&{1},true,false) || if ({0}&&{2},true,false)"
                 - Name: ns=3;Source0
                   Type: BaseDataVariableType
                   DataType: BaseDataType
@@ -6982,7 +7054,7 @@ Children:
                       DataType: String
                       ReferenceType: HasParameter
                       ModellingRule: Optional
-                      Value: "if ((({0}+{1})>= 10), 0, if((({0}+{1}) <= 0),1,2))"
+                      Value: "if ({0}+{1}>= 10, 0, if({0}+{1} <= 0,1,2))"
                     - Name: ns=3;Source0
                       Type: BaseDataVariableType
                       DataType: BaseDataType
@@ -7242,7 +7314,7 @@ Children:
               - Name: Text
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                Value: {"LocaleId":"en-US","Text":"Test"}
+                Value: {"LocaleId":"en-US","Text":"ciao"}
               - Name: Width
                 Type: BaseVariableType
                 DataType: Size
@@ -7270,7 +7342,7 @@ Children:
               - Name: Text
                 Type: BaseDataVariableType
                 DataType: LocalizedText
-                Value: {"LocaleId":"en-US","Text":"Test"}
+                Value: {"LocaleId":"en-US","Text":"ia"}
               - Name: Width
                 Type: BaseVariableType
                 DataType: Size
@@ -7331,42 +7403,49 @@ Children:
                         DataType: BaseDataType
                         ReferenceType: HasSource
                         Children:
-                        - Name: DynamicLink
-                          Type: DynamicLink
-                          DataType: NodePath
-                          Value: "../../../../../../../PatternValue/TextBox1/Text"
+                        - Name: StringFormatter1
+                          Type: StringFormatter
+                          Children:
+                          - Name: Format
+                            Type: BaseDataVariableType
+                            DataType: LocalizedText
+                            ReferenceType: HasParameter
+                            ModellingRule: Optional
+                            Value: {"LocaleId":"en-US","Text":"%{0}%"}
+                          - Name: ns=3;Source0
+                            Type: BaseDataVariableType
+                            DataType: BaseDataType
+                            ReferenceType: HasSource
+                            Children:
+                            - Name: DynamicLink
+                              Type: DynamicLink
+                              DataType: NodePath
+                              Value: "../../../../../../../../../PatternValue/TextBox1/Text"
                   - Name: Pairs
                     Type: BaseObjectType
-                    ModellingRule: None
                     Children:
                     - Name: Pair
                       Type: ValueMapPair
-                      ModellingRule: None
                       Children:
                       - Name: Key
                         Type: BaseDataVariableType
                         DataType: Boolean
-                        ModellingRule: None
                         Value: false
                       - Name: Value
                         Type: BaseDataVariableType
                         DataType: LocalizedText
-                        ModellingRule: None
-                        Value: {"LocaleId":"en-US","Text":"Diverso"}
+                        Value: {"LocaleId":"en-US","Text":"False"}
                     - Name: Pair1
                       Type: ValueMapPair
-                      ModellingRule: None
                       Children:
                       - Name: Key
                         Type: BaseDataVariableType
                         DataType: Boolean
-                        ModellingRule: None
                         Value: true
                       - Name: Value
                         Type: BaseDataVariableType
                         DataType: LocalizedText
-                        ModellingRule: None
-                        Value: {"LocaleId":"en-US","Text":"Uguale"}
+                        Value: {"LocaleId":"en-US","Text":"True"}
               - Name: Width
                 Type: BaseVariableType
                 DataType: Size
@@ -7382,41 +7461,6 @@ Children:
                 DataType: Boolean
                 ModellingRule: Optional
                 Value: true
-            - Name: Label2
-              Type: Label
-              Children:
-              - Name: Text
-                Type: BaseDataVariableType
-                DataType: LocalizedText
-                Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-                Children:
-                - Name: ExpressionEvaluator1
-                  Type: ExpressionEvaluator
-                  Children:
-                  - Name: Expression
-                    Type: BaseDataVariableType
-                    DataType: String
-                    ReferenceType: HasParameter
-                    ModellingRule: Optional
-                    Value: "like(\"{0}\",\"{1}\")"
-                  - Name: ns=3;Source0
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../StringValue/TextBox1/Text"
-                  - Name: ns=3;Source1
-                    Type: BaseDataVariableType
-                    DataType: BaseDataType
-                    ReferenceType: HasSource
-                    Children:
-                    - Name: DynamicLink
-                      Type: DynamicLink
-                      DataType: NodePath
-                      Value: "../../../../../PatternValue/TextBox1/Text"
         - Name: LeftMargin
           Type: BaseVariableType
           DataType: Size
@@ -7661,42 +7705,6 @@ Children:
       DataType: Size
       ModellingRule: Optional
       Value: 50.0
-  - Name: Label1
-    Type: Label
-    Children:
-    - Name: Text
-      Type: BaseDataVariableType
-      DataType: LocalizedText
-      Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-      Children:
-      - Name: ExpressionEvaluator1
-        Type: ExpressionEvaluator
-        Children:
-        - Name: Expression
-          Type: BaseDataVariableType
-          DataType: String
-          ReferenceType: HasParameter
-          ModellingRule: Optional
-          Value: "like(\"ciao\",{1})"
-        - Name: ns=3;Source1
-          Type: BaseDataVariableType
-          DataType: BaseDataType
-          ReferenceType: HasSource
-          Children:
-          - Name: DynamicLink
-            Type: DynamicLink
-            DataType: NodePath
-            Value: "../../../../VerticalLayout1/Like_Function/VerticalLayout1/HorizontalLayout1/PatternValue/TextBox1/Text"
-    - Name: LeftMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 390.0
-    - Name: TopMargin
-      Type: BaseVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 748.0
 - Name: New_UI_Objects
   Id: g=2c0c53f1a8132ee0b42ec125fdfc5199
   Supertype: Screen
@@ -8364,91 +8372,6 @@ Children:
           Type: BaseDataVariableType
           DataType: Float
           Value: 0.0
-        - Name: MouseDownEventHandler1
-          Type: EventHandler
-          Children:
-          - Name: ListenEventType
-            Type: PropertyType
-            DataType: NodeId
-            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseDownEvent"
-          - Name: MethodsToCall
-            Type: BaseObjectType
-            Children:
-            - Name: MethodContainer1
-              Type: BaseObjectType
-              Children:
-              - Name: ns=3;ObjectPointer
-                Type: NodePointer
-                DataType: NodeId
-                Value: "/Objects/Commands/VariableCommands"
-                Children:
-                - Name: Kind
-                  Type: PropertyType
-                  DataType: NodeId
-                  Value: "/Types/ObjectTypes/BaseObjectType"
-              - Name: ns=3;Method
-                Type: BaseDataVariableType
-                DataType: String
-                Value: "Set"
-              - Name: InputArguments
-                Type: BaseObjectType
-                Children:
-                - Name: VariableToModify
-                  Type: BaseDataVariableType
-                  DataType: VariablePointer
-                  Description: {"NamespaceIndex":3,"TextId":"SetVariableToModifyDescription"}
-                  Value: {"IdType":0,"Id":0,"Namespace":-1}
-                  Children:
-                  - Name: DynamicLink
-                    Type: DynamicLink
-                    DataType: NodePath
-                    Value: "../../../../../ClickVariable@NodeId"
-                - Name: Value
-                  Type: BaseDataVariableType
-                  DataType: Float
-                  Description: {"NamespaceIndex":3,"TextId":"SetValueDescription"}
-                  Value: 1.2000000476837158
-                - Name: ArrayIndex
-                  Type: BaseDataVariableType
-                  DataType: UInt32
-                  Description: {"NamespaceIndex":3,"TextId":"SetArrayIndexDescription"}
-                  ValueRank: ScalarOrOneDimension
-                  Value: 0
-          - Name: EventArguments
-            Type: MouseDownEvent
-            Children:
-            - Name: EventId
-              Type: PropertyType
-              DataType: ByteString
-              Value: ""
-            - Name: EventType
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceNode
-              Type: PropertyType
-              DataType: NodeId
-              Value: {"IdType":0,"Id":0,"Namespace":-1}
-            - Name: SourceName
-              Type: PropertyType
-              DataType: String
-              Value: ""
-            - Name: Time
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: ReceiveTime
-              Type: PropertyType
-              DataType: UtcTime
-              Value: "1601-01-01T00:00:00.0000000"
-            - Name: Message
-              Type: PropertyType
-              DataType: LocalizedText
-              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
-            - Name: Severity
-              Type: PropertyType
-              DataType: UInt16
-              Value: 0
         - Name: MouseUpEventHandler1
           Type: EventHandler
           Children:
@@ -8501,6 +8424,91 @@ Children:
                   Value: 0
           - Name: EventArguments
             Type: MouseUpEvent
+            Children:
+            - Name: EventId
+              Type: PropertyType
+              DataType: ByteString
+              Value: ""
+            - Name: EventType
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceNode
+              Type: PropertyType
+              DataType: NodeId
+              Value: {"IdType":0,"Id":0,"Namespace":-1}
+            - Name: SourceName
+              Type: PropertyType
+              DataType: String
+              Value: ""
+            - Name: Time
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: ReceiveTime
+              Type: PropertyType
+              DataType: UtcTime
+              Value: "1601-01-01T00:00:00.0000000"
+            - Name: Message
+              Type: PropertyType
+              DataType: LocalizedText
+              Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            - Name: Severity
+              Type: PropertyType
+              DataType: UInt16
+              Value: 0
+        - Name: MouseDownEventHandler1
+          Type: EventHandler
+          Children:
+          - Name: ListenEventType
+            Type: PropertyType
+            DataType: NodeId
+            Value: "/Types/EventTypes/BaseEventType/MouseEvent/MouseDownEvent"
+          - Name: MethodsToCall
+            Type: BaseObjectType
+            Children:
+            - Name: MethodContainer1
+              Type: BaseObjectType
+              Children:
+              - Name: ns=3;ObjectPointer
+                Type: NodePointer
+                DataType: NodeId
+                Value: "/Objects/Commands/VariableCommands"
+                Children:
+                - Name: Kind
+                  Type: PropertyType
+                  DataType: NodeId
+                  Value: "/Types/ObjectTypes/BaseObjectType"
+              - Name: ns=3;Method
+                Type: BaseDataVariableType
+                DataType: String
+                Value: "Set"
+              - Name: InputArguments
+                Type: BaseObjectType
+                Children:
+                - Name: VariableToModify
+                  Type: BaseDataVariableType
+                  DataType: VariablePointer
+                  Description: {"NamespaceIndex":3,"TextId":"SetVariableToModifyDescription"}
+                  Value: {"IdType":0,"Id":0,"Namespace":-1}
+                  Children:
+                  - Name: DynamicLink
+                    Type: DynamicLink
+                    DataType: NodePath
+                    Value: "../../../../../ClickVariable@NodeId"
+                - Name: Value
+                  Type: BaseDataVariableType
+                  DataType: Float
+                  Description: {"NamespaceIndex":3,"TextId":"SetValueDescription"}
+                  Value: 1.2000000476837158
+                - Name: ArrayIndex
+                  Type: BaseDataVariableType
+                  DataType: UInt32
+                  Description: {"NamespaceIndex":3,"TextId":"SetArrayIndexDescription"}
+                  ValueRank: ScalarOrOneDimension
+                  Value: 0
+          - Name: EventArguments
+            Type: MouseDownEvent
             Children:
             - Name: EventId
               Type: PropertyType
@@ -9117,6 +9125,479 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 20.0
+- Name: Users_Roles
+  Id: g=344573f8d17936a6d92966d26c0ca45f
+  Supertype: Screen
+  ReferenceType: HasComponent
+  Children:
+  - Name: LoginForm1
+    Type: LoginForm
+    Children:
+    - Name: Panel
+      Type: NodePointer
+      DataType: NodeId
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item/Container"
+      - Name: ConditionalConverter1
+        Type: ConditionalConverter
+        Children:
+        - Name: Condition
+          Type: BaseDataVariableType
+          DataType: Boolean
+          ReferenceType: HasSource
+          Value: false
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "{Session}/LoggedIn"
+    - Name: CurrentPanel
+      Type: NodePointer
+      DataType: NodeId
+      AccessLevel: Read
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/BaseUIObject/Item"
+    - Class: Reference
+      Target: ns=5;i=478
+      Direction: Forward
+    - Name: Users
+      Type: NodePointer
+      DataType: NodeId
+      Value: "/Objects/newsletter_FTOptix_1_3/Security/Users"
+      Children:
+      - Name: Kind
+        Type: PropertyType
+        DataType: NodeId
+        Value: "/Types/ObjectTypes/BaseObjectType/FolderType"
+    - Name: PanelAliasNode
+      Type: BaseDataVariableType
+      DataType: NodeId
+      ValueRank: ScalarOrOneDimension
+      Value: {"IdType":0,"Id":0,"Namespace":-1}
+      Children:
+      - Name: DynamicLink
+        Type: DynamicLink
+        DataType: NodePath
+        Value: "../Users@NodeId"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+  - Name: VerticalLayout1
+    Type: ColumnLayout
+    Children:
+    - Name: Label1
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"Il widget è abilitato solo per il ruolo \"Maintanance\""}
+    - Name: HorizontalLayout1
+      Type: RowLayout
+      Children:
+      - Name: Switch1
+        Type: Switch
+        Children:
+        - Name: Checked
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 60.0
+      - Name: LED1
+        Type: Led
+        Children:
+        - Name: Active
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Switch1/Checked"
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 100.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: Appearance
+          Type: BaseVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "rectangular"
+      - Name: HorizontalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 100.0
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/Roles/Maintanance"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 450.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: VerticalGap
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: Label2
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"Il widget è visibile solo per il ruolo \"Developers\""}
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 0.0
+      - Name: TopMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 50.0
+    - Name: HorizontalLayout2
+      Type: RowLayout
+      Children:
+      - Name: Switch1
+        Type: Switch
+        Children:
+        - Name: Checked
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 60.0
+      - Name: LED1
+        Type: Led
+        Children:
+        - Name: Active
+          Type: BaseDataVariableType
+          DataType: Boolean
+          Value: false
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../Switch1/Checked"
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 100.0
+        - Name: Height
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 30.0
+        - Name: Appearance
+          Type: BaseVariableType
+          DataType: String
+          ModellingRule: Optional
+          Value: "rectangular"
+      - Name: HorizontalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 100.0
+      - Name: Enabled
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/Roles/Developers"
+  - Name: ConnectedUsers
+    Type: ColumnLayout
+    Children:
+    - Name: Width
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: Height
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 30.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 380.0
+    - Name: Label1
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+        Children:
+        - Name: StringFormatter1
+          Type: StringFormatter
+          Children:
+          - Name: Format
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            ReferenceType: HasParameter
+            ModellingRule: Optional
+            Value: {"LocaleId":"en-US","Text":"Utente connesso: {0}"}
+          - Name: ns=3;Source0
+            Type: BaseDataVariableType
+            DataType: BaseDataType
+            ReferenceType: HasSource
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/User@BrowseName"
+    - Name: VerticalGap
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: HorizontalLayout1
+      Type: RowLayout
+      Children:
+      - Name: Label2
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Gruppi a cui appartiene l'utente connesso:"}
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 400.0
+      - Name: VerticalLayout1
+        Type: ColumnLayout
+        Children:
+        - Name: Checkbox1
+          Type: CheckBox
+          Children:
+          - Name: Checked
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Groups/Admin"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Groups/Admin@BrowseName"
+        - Name: Checkbox2
+          Type: CheckBox
+          Children:
+          - Name: Checked
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Groups/Guest"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Groups/Guest@BrowseName"
+        - Name: VerticalGap
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: HorizontalGap
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+      - Name: HorizontalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: VerticalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
+    - Name: HorizontalLayout2
+      Type: RowLayout
+      Children:
+      - Name: Label2
+        Type: Label
+        Children:
+        - Name: Text
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ModellingRule: Optional
+          Value: {"LocaleId":"en-US","Text":"Ruoli a cui appartiene l'utente connesso:"}
+        - Name: Width
+          Type: BaseVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 400.0
+      - Name: VerticalLayout1
+        Type: ColumnLayout
+        Children:
+        - Name: Checkbox1
+          Type: CheckBox
+          Children:
+          - Name: Checked
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Roles/Developers"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Roles/Developers@BrowseName"
+        - Name: Checkbox2
+          Type: CheckBox
+          Children:
+          - Name: Checked
+            Type: BaseDataVariableType
+            DataType: Boolean
+            Value: false
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Roles/Maintanance"
+              Children:
+              - Name: Mode
+                Type: BaseVariableType
+                DataType: DynamicLinkMode
+                ModellingRule: Optional
+                Value: 2
+          - Name: Text
+            Type: BaseDataVariableType
+            DataType: LocalizedText
+            Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+            Children:
+            - Name: DynamicLink
+              Type: DynamicLink
+              DataType: NodePath
+              Value: "{Session}/Roles/Maintanance@BrowseName"
+        - Name: VerticalGap
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+        - Name: HorizontalGap
+          Type: BaseDataVariableType
+          DataType: Size
+          ModellingRule: Optional
+          Value: 10.0
+      - Name: HorizontalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
+      - Name: VerticalGap
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 10.0
 - File: TrendImprovements/TrendImprovements.yaml
 - File: Widget/Widget.yaml
 - File: NavigationPanelStyleScreens/NavigationPanelStyleScreens.yaml
+- File: LoginForm1/LoginForm1.yaml

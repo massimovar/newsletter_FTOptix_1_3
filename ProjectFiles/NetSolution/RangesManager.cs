@@ -15,6 +15,10 @@ using FTOptix.CoreBase;
 using FTOptix.NetLogic;
 using FTOptix.Core;
 using System.Linq;
+using FTOptix.S7TiaProfinet;
+using FTOptix.CommunicationDriver;
+using FTOptix.MicroController;
+using FTOptix.CODESYS;
 #endregion
 
 public class RangesManager : BaseNetLogic

@@ -4,3 +4,25 @@ Type: UsersCategoryFolder
 Children:
 - Name: User1
   Type: UserType
+  Children:
+  - Class: Reference
+    Type: HasGroup
+    Target: g=c89dfba8862f99f94b5ef90a761fd6d6
+- Name: Admin
+  Type: UserType
+  Children:
+  - Class: Reference
+    Type: HasGroup
+    Target: g=3c2795c40a153986711cbd8701dc5fef
+  - Class: Reference
+    Type: HasRole
+    Target: g=2ecc134cd13da0687f332aa17b4b25b0
+- Name: Developer
+  Type: UserType
+  Children:
+  - Class: Reference
+    Type: HasGroup
+    Target: g=3c2795c40a153986711cbd8701dc5fef
+  - Class: Reference
+    Type: HasRole
+    Target: g=ed5e3978f6af574af64b54aa8724effd

@@ -4,6 +4,10 @@ using FTOptix.NetLogic;
 using FTOptix.UI;
 using FTOptix.EventLogger;
 using FTOptix.DataLogger;
+using FTOptix.S7TiaProfinet;
+using FTOptix.CommunicationDriver;
+using FTOptix.MicroController;
+using FTOptix.CODESYS;
 #endregion
 
 public class AlarmGridLogic : BaseNetLogic
