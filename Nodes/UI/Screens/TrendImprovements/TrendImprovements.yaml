@@ -1751,33 +1751,177 @@ Children:
   Supertype: Screen
   ReferenceType: HasComponent
   Children:
-  - Name: Sparkline1
-    Type: Sparkline
+  - Name: VerticalLayout1
+    Type: ColumnLayout
     Children:
-    - Name: PenValue
-      Type: BaseDataVariableType
-      DataType: BaseDataType
-      Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "/Objects/newsletter_FTOptix_1_3/Loggers/DataLogger1/VariablesToLog/Variable1/LastValue"
-    - Name: TimeWindow
-      Type: BaseDataVariableType
-      DataType: Duration
-      Value: "0:00:02:0.0000000"
     - Name: Width
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 200.0
-    - Name: Height
+      Value: 50.0
+    - Name: HorizontalAlignment
       Type: BaseVariableType
-      DataType: Size
+      DataType: HorizontalAlignment
       ModellingRule: Optional
-      Value: 200.0
-    - Name: LeftMargin
-      Type: BaseVariableType
+      Value: 3
+    - Name: Label1
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"Variable1"}
+    - Name: Sparkline1
+      Type: Sparkline
+      Children:
+      - Name: PenValue
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/newsletter_FTOptix_1_3/Loggers/DataLogger1/VariablesToLog/Variable1/LastValue"
+      - Name: TimeWindow
+        Type: BaseDataVariableType
+        DataType: Duration
+        Value: "0:00:02:0.0000000"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 200.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 200.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: PenThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 3.0
+      - Name: PenColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#0000ff"
+      - Name: YAxisMaximum
+        Type: BaseDataVariableType
+        DataType: Double
+        ModellingRule: Optional
+        Value: 100.0
+      - Name: RangeHigh
+        Type: BaseDataVariableType
+        DataType: Double
+        ModellingRule: Optional
+        Value: 90.0
+      - Name: RangeLow
+        Type: BaseDataVariableType
+        DataType: Double
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: RangeColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#0fafff"
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+    - Name: Label2
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"Variable2"}
+    - Name: Sparkline2
+      Type: Sparkline
+      Children:
+      - Name: PenValue
+        Type: BaseDataVariableType
+        DataType: BaseDataType
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "/Objects/newsletter_FTOptix_1_3/Loggers/DataLogger1/VariablesToLog/Variable2/LastValue"
+      - Name: TimeWindow
+        Type: BaseDataVariableType
+        DataType: Duration
+        Value: "0:00:02:0.0000000"
+      - Name: Width
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 200.0
+      - Name: Height
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 200.0
+      - Name: LeftMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 3
+      - Name: PenThickness
+        Type: BaseDataVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 3.0
+      - Name: PenColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#0000ff"
+      - Name: YAxisMaximum
+        Type: BaseDataVariableType
+        DataType: Double
+        ModellingRule: Optional
+        Value: 100.0
+      - Name: RangeHigh
+        Type: BaseDataVariableType
+        DataType: Double
+        ModellingRule: Optional
+        Value: 90.0
+      - Name: RangeLow
+        Type: BaseDataVariableType
+        DataType: Double
+        ModellingRule: Optional
+        Value: 10.0
+      - Name: RangeColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#0fafff"
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 30.0
+    - Name: VerticalGap
+      Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
       Value: 30.0
@@ -1785,39 +1929,4 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 60.0
-    - Name: HorizontalAlignment
-      Type: BaseVariableType
-      DataType: HorizontalAlignment
-      ModellingRule: Optional
-      Value: 3
-    - Name: PenThickness
-      Type: BaseDataVariableType
-      DataType: Size
-      ModellingRule: Optional
-      Value: 3.0
-    - Name: PenColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
-      Value: "#ff0000"
-    - Name: YAxisMaximum
-      Type: BaseDataVariableType
-      DataType: Double
-      ModellingRule: Optional
-      Value: 100.0
-    - Name: RangeHigh
-      Type: BaseDataVariableType
-      DataType: Double
-      ModellingRule: Optional
-      Value: 90.0
-    - Name: RangeLow
-      Type: BaseDataVariableType
-      DataType: Double
-      ModellingRule: Optional
-      Value: 10.0
-    - Name: RangeColor
-      Type: BaseDataVariableType
-      DataType: Color
-      ModellingRule: Optional
-      Value: "#ffff00"
+      Value: 30.0

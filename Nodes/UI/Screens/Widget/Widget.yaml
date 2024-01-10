@@ -25,7 +25,7 @@ Children:
     Type: BaseVariableType
     DataType: Size
     ModellingRule: Optional
-    Value: 300.0
+    Value: 380.0
   - Name: BackgroundColor
     Type: BaseDataVariableType
     DataType: Color
