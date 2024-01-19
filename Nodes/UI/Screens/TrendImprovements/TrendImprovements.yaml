@@ -1719,29 +1719,44 @@ Children:
           DataType: HorizontalAlignment
           ModellingRule: Optional
           Value: 3
-        - Name: RangesManager
-          Type: NetLogic
-          Children:
-          - Name: MyTrend
-            Type: BaseDataVariableType
-            DataType: NodeId
-            Value: {"IdType":0,"Id":0,"Namespace":-1}
-            Children:
-            - Name: DynamicLink
-              Type: DynamicLink
-              DataType: NodePath
-              Value: "../../../../Trend1@NodeId"
-              Children:
-              - Name: Mode
-                Type: BaseVariableType
-                DataType: DynamicLinkMode
-                ModellingRule: Optional
-                Value: 2
       - Name: ScrollAxesEnabled
         Type: BaseDataVariableType
         DataType: ScrollAxesEnabledEnum
         ModellingRule: Optional
         Value: 2
+      - Name: RangesManager
+        Type: NetLogic
+        Children:
+        - Name: MyTrend
+          Type: BaseDataVariableType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../Trend1@NodeId"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
+        - Name: TimeRangesContainer
+          Type: BaseDataVariableType
+          DataType: NodeId
+          Value: {"IdType":0,"Id":0,"Namespace":-1}
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../RangesContainer@NodeId"
+            Children:
+            - Name: Mode
+              Type: BaseVariableType
+              DataType: DynamicLinkMode
+              ModellingRule: Optional
+              Value: 2
 - Name: Trend_thresholds
   Id: g=3622ad45e98bbfea454397293e3e6538
   Supertype: Screen
@@ -1842,6 +1857,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 30.0
+      - Name: RefreshTime
+        Type: BaseDataVariableType
+        DataType: Duration
+        ModellingRule: Optional
+        Value: "0:00:00:0.2500000"
     - Name: Label2
       Type: Label
       Children:
@@ -1920,6 +1940,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 30.0
+      - Name: RefreshTime
+        Type: BaseDataVariableType
+        DataType: Duration
+        ModellingRule: Optional
+        Value: "0:00:00:0.2500000"
     - Name: VerticalGap
       Type: BaseDataVariableType
       DataType: Size

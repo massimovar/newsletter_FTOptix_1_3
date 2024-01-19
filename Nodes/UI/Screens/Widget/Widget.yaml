@@ -1585,10 +1585,24 @@ Children:
       DataType: LocalizedText
       Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
       Children:
-      - Name: DynamicLink
-        Type: DynamicLink
-        DataType: NodePath
-        Value: "../../RangeEndDate"
+      - Name: StringFormatter1
+        Type: StringFormatter
+        Children:
+        - Name: Format
+          Type: BaseDataVariableType
+          DataType: LocalizedText
+          ReferenceType: HasParameter
+          ModellingRule: Optional
+          Value: {"LocaleId":"","Text":"{0:c}"}
+        - Name: ns=3;Source0
+          Type: BaseDataVariableType
+          DataType: BaseDataType
+          ReferenceType: HasSource
+          Children:
+          - Name: DynamicLink
+            Type: DynamicLink
+            DataType: NodePath
+            Value: "../../../../Timespan"
     - Name: VerticalAlignment
       Type: BaseVariableType
       DataType: VerticalAlignment

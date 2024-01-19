@@ -19,23 +19,29 @@ using FTOptix.S7TiaProfinet;
 using FTOptix.CommunicationDriver;
 using FTOptix.MicroController;
 using FTOptix.CODESYS;
+using static System.Formats.Asn1.AsnWriter;
 #endregion
 
 public class RangesManager : BaseNetLogic
 {
-    private TrendRangeWidget _trendRangesWidget;
-    private Trend _myTrend;
-    private IUANode ranges;
+    private Trend _trend;
+    private Store _store;
+    private IUANode _trendPens;
+    private IUANode _ranges;
+    private IUANode _rangesContainer;
+    private ReferencesObserver _referencesObserver;
     private IEventRegistration referencesEventRegistration;
 
     public override void Start()
     {
-        _trendRangesWidget = Project.Current.Get<TrendRangeWidget>("UI/Screens/Widget/TrendRangeWidget");
-        _myTrend = InformationModel.Get<Trend>(LogicObject.GetVariable("MyTrend").Value);
-        ranges = _myTrend.Get("TimeRanges");
-        ReferencesObserver referencesObserver = new ReferencesObserver(ranges);
+        _trend = InformationModel.Get<Trend>(LogicObject.GetVariable("MyTrend").Value);
+        _store = InformationModel.Get<Store>(_trend.Model);
+        _trendPens = _trend.Get("Pens");
+        _ranges = _trend.Get("TimeRanges");
+        _rangesContainer = InformationModel.Get(LogicObject.GetVariable("TimeRangesContainer").Value);
 
-        referencesEventRegistration = ranges.RegisterEventObserver(referencesObserver, EventType.ForwardReferenceAdded | EventType.ForwardReferenceRemoved);
+        _referencesObserver = new ReferencesObserver(_ranges, _trendPens, _rangesContainer, _store);
+        referencesEventRegistration = _ranges.RegisterEventObserver(_referencesObserver, EventType.ForwardReferenceAdded | EventType.ForwardReferenceRemoved);
     }
 
     public override void Stop()
@@ -46,24 +52,38 @@ public class RangesManager : BaseNetLogic
 
     private class ReferencesObserver : IReferenceObserver
     {
-        public ReferencesObserver(IUANode rangesNode)
+        private IUANode uiContainer;
+        private Store store;
+        private IUANode pens;
+
+        public ReferencesObserver(IUANode rangesNode, IUANode pens, IUANode uiContainer, Store store)
         {
+            this.uiContainer = uiContainer;
+            this.store = store;
+            this.pens = pens;
             rangesNode.Children.ToList().ForEach(CreateRangeUI);
         }
 
         private void CreateRangeUI(IUANode rangeNode)
         {
-            Log.Info(rangeNode.BrowseName);
+            TimeRange range = (TimeRange)(rangeNode as IUAVariable).Value.Value;
+            var trendWidgetInstance = InformationModel.Make<TrendRangeWidget>(rangeNode.BrowseName);
+            trendWidgetInstance.GetVariable("RangeStartDate").Value = range.StartTime;
+            trendWidgetInstance.GetVariable("RangeEndDate").Value = range.EndTime;
+            var timeSpan = range.EndTime - range.StartTime;
+            trendWidgetInstance.GetVariable("Timespan").Value = timeSpan.TotalMilliseconds;
+            uiContainer.Add(trendWidgetInstance);
         }
 
         public void OnReferenceAdded(IUANode sourceNode, IUANode targetNode, NodeId referenceTypeId, ulong senderId)
         {
-            Log.Info("Added");
+            CreateRangeUI(targetNode);
         }
 
         public void OnReferenceRemoved(IUANode sourceNode, IUANode targetNode, NodeId referenceTypeId, ulong senderId)
         {
-            
+            var uiRange = uiContainer.Get(targetNode.BrowseName);
+            uiRange?.Delete();
         }
     }
 }
