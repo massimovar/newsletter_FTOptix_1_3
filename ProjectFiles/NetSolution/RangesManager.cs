@@ -55,21 +55,25 @@ public class RangesManager : BaseNetLogic
         private IUANode uiContainer;
         private Store store;
         private IUANode pens;
+        private IUANode rangesNode;
 
         public ReferencesObserver(IUANode rangesNode, IUANode pens, IUANode uiContainer, Store store)
         {
             this.uiContainer = uiContainer;
             this.store = store;
             this.pens = pens;
+            this.rangesNode = rangesNode;
             rangesNode.Children.ToList().ForEach(CreateRangeUI);
         }
 
         private void CreateRangeUI(IUANode rangeNode)
         {
             TimeRange range = (TimeRange)(rangeNode as IUAVariable).Value.Value;
-            var trendWidgetInstance = InformationModel.Make<TrendRangeWidget>(rangeNode.BrowseName);
-            trendWidgetInstance.GetVariable("RangeStartDate").Value = range.StartTime;
-            trendWidgetInstance.GetVariable("RangeEndDate").Value = range.EndTime;
+            var startTime = range.StartTime;
+            var endTime = range.EndTime;
+            var trendWidgetInstance = InformationModel.Make<TrendRangeWidget>(rangeNode.BrowseName + rangeNode.NodeId);
+            trendWidgetInstance.GetVariable("RangeStartDate").Value = startTime;
+            trendWidgetInstance.GetVariable("RangeEndDate").Value = endTime;
             var timeSpan = range.EndTime - range.StartTime;
             trendWidgetInstance.GetVariable("Timespan").Value = timeSpan.TotalMilliseconds;
             uiContainer.Add(trendWidgetInstance);
@@ -82,7 +86,7 @@ public class RangesManager : BaseNetLogic
 
         public void OnReferenceRemoved(IUANode sourceNode, IUANode targetNode, NodeId referenceTypeId, ulong senderId)
         {
-            var uiRange = uiContainer.Get(targetNode.BrowseName);
+            var uiRange = uiContainer.Children.Get(targetNode.BrowseName + targetNode.NodeId);
             uiRange?.Delete();
         }
     }
