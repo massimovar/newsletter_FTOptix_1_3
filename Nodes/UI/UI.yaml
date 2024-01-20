@@ -205,6 +205,15 @@ Children:
     Children:
     - Name: Default
       Type: NavigationPanelStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 15.0
+      - Name: Radius
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 0.0
     - Name: NavigationPanelStyle1
       Type: NavigationPanelStyle
       Children:
@@ -561,7 +570,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Trend"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -577,7 +586,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Allarmi analogici"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -593,7 +602,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"UI responsiva"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -609,7 +618,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Web browser"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -625,7 +634,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Web Presentation Engine"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -641,7 +650,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Stylesheet"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -657,7 +666,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Alias multipli"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -673,7 +682,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Expression evaluator"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -689,7 +698,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Nuovi oggetti UI"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -705,7 +714,7 @@ Children:
         - Name: Title
           Type: BaseDataVariableType
           DataType: LocalizedText
-          Value: {"NamespaceIndex":-1,"LocaleId":"","Text":""}
+          Value: {"LocaleId":"en-US","Text":"Utenti e ruoli"}
         - Name: Panel
           Type: NodePointer
           DataType: NodeId
@@ -755,4 +764,19 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 3
+    - Name: TabHeight
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 75.0
+    - Name: TabWidth
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 150.0
+    - Name: Appearance
+      Type: BaseVariableType
+      DataType: String
+      ModellingRule: Optional
+      Value: ""
 - File: Screens/Screens.yaml
