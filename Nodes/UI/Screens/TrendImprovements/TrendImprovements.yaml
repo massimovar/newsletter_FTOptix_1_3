@@ -1684,7 +1684,7 @@ Children:
               - Name: Thickness
                 Type: BaseDataVariableType
                 DataType: Size
-                Value: 20.0
+                Value: 2.0
           - Name: Color
             Type: BaseDataVariableType
             DataType: Color
