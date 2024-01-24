@@ -209,11 +209,15 @@ Children:
       - Name: FontSize
         Type: BaseDataVariableType
         DataType: Size
-        Value: 15.0
+        Value: 18.0
       - Name: Radius
         Type: BaseDataVariableType
         DataType: Size
         Value: 0.0
+      - Name: IconUsesTextColor
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
     - Name: NavigationPanelStyle1
       Type: NavigationPanelStyle
       Children:
@@ -260,6 +264,11 @@ Children:
     Children:
     - Name: Default
       Type: DataListStyle
+      Children:
+      - Name: FontSize
+        Type: BaseDataVariableType
+        DataType: Size
+        Value: 18.0
     - Name: DataListStyle1
       Type: DataListStyle
       Children:
@@ -773,7 +782,7 @@ Children:
       Type: BaseDataVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 150.0
+      Value: 128.0
     - Name: Appearance
       Type: BaseVariableType
       DataType: String

@@ -229,7 +229,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"proprietà"}
+            Value: {"LocaleId":"en-US","Text":"Proprietà"}
           - Name: Panel
             Type: NodePointer
             DataType: NodeId
@@ -245,7 +245,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"threshold"}
+            Value: {"LocaleId":"en-US","Text":"Soglie"}
           - Name: Panel
             Type: NodePointer
             DataType: NodeId
@@ -261,7 +261,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"time range"}
+            Value: {"LocaleId":"en-US","Text":"Time range"}
           - Name: Panel
             Type: NodePointer
             DataType: NodeId
@@ -277,7 +277,7 @@ Children:
           - Name: Title
             Type: BaseDataVariableType
             DataType: LocalizedText
-            Value: {"LocaleId":"en-US","Text":"sparkline"}
+            Value: {"LocaleId":"en-US","Text":"Sparkline"}
           - Name: Panel
             Type: NodePointer
             DataType: NodeId
@@ -2411,7 +2411,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"HorizontalLayout Settings"}
+            Value: {"LocaleId":"en-US","Text":"Impostazioni HorizontalLayout"}
           - Name: BottomMargin
             Type: BaseVariableType
             DataType: Size
@@ -2989,7 +2989,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"VerticalLayout Settings"}
+            Value: {"LocaleId":"en-US","Text":"Impostazioni VerticalLayout"}
           - Name: BottomMargin
             Type: BaseVariableType
             DataType: Size
@@ -4152,7 +4152,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Button1"}
+            Value: {"LocaleId":"en-US","Text":"Pulsante"}
           - Name: TopMargin
             Type: BaseVariableType
             DataType: Size
@@ -6810,7 +6810,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"IF( (Switch1 AND Switch2) OR (Switch1 AND Switch3)) --> Enable Led"}
+            Value: {"LocaleId":"en-US","Text":"IF( (Switch1 AND Switch2) OR (Switch1 AND Switch3)) --> Abilita Led"}
         - Name: HorizontalLayout1
           Type: RowLayout
           Children:
@@ -7037,7 +7037,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"IF (Var1 + Var2) <= 0 --> Red Color"}
+            Value: {"LocaleId":"en-US","Text":"IF (Var1 + Var2) <= 0 --> Label rossa"}
         - Name: Label2
           Type: Label
           Children:
@@ -7045,7 +7045,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"IF (Var1 + Var2) BETWEEN 1 AND 9 -->White Color"}
+            Value: {"LocaleId":"en-US","Text":"IF (Var1 + Var2) BETWEEN 1 AND 9 --> Label bianca"}
         - Name: Label3
           Type: Label
           Children:
@@ -7053,7 +7053,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"IF (Var1 + Var2) >= 10 --> Lime Color"}
+            Value: {"LocaleId":"en-US","Text":"IF (Var1 + Var2) >= 10 --> Label verde"}
         - Name: HorizontalLayout1
           Type: RowLayout
           Children:
@@ -7566,7 +7566,7 @@ Children:
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ModellingRule: Optional
-                Value: {"LocaleId":"en-US","Text":"Result"}
+                Value: {"LocaleId":"en-US","Text":"Risultato"}
             - Name: TextBox1
               Type: TextBox
               Children:
@@ -7780,7 +7780,7 @@ Children:
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ModellingRule: Optional
-                Value: {"LocaleId":"en-US","Text":"String value"}
+                Value: {"LocaleId":"en-US","Text":"Stringa"}
             - Name: TextBox1
               Type: TextBox
               Children:
@@ -7808,7 +7808,7 @@ Children:
                 Type: BaseDataVariableType
                 DataType: LocalizedText
                 ModellingRule: Optional
-                Value: {"LocaleId":"en-US","Text":"Is Empty?"}
+                Value: {"LocaleId":"en-US","Text":"E' vuota?"}
             - Name: TextBox1
               Type: TextBox
               Children:
@@ -7981,7 +7981,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Toggle Button"}
+          Value: {"LocaleId":"en-US","Text":"Pulsante \"Toggle\""}
       - Name: ToggleButton1
         Type: ToggleButton
         Children:
@@ -7993,7 +7993,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"ToggleButton1"}
+          Value: {"LocaleId":"en-US","Text":"Pulsante toggle"}
         - Name: LeftMargin
           Type: BaseVariableType
           DataType: Size
@@ -8223,7 +8223,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Momentary Button"}
+          Value: {"LocaleId":"en-US","Text":"Pulsante impulsivo"}
       - Name: LED1
         Type: Led
         Children:
@@ -8281,7 +8281,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Minimum Hold Time"}
+            Value: {"LocaleId":"en-US","Text":"Tempo minimo di pressione"}
           - Name: TextVerticalAlignment
             Type: BaseVariableType
             DataType: TextVerticalAlignment
@@ -8340,7 +8340,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Maximum Hold Time"}
+            Value: {"LocaleId":"en-US","Text":"Tempo massimo di pressione"}
           - Name: TextVerticalAlignment
             Type: BaseVariableType
             DataType: TextVerticalAlignment
@@ -8542,7 +8542,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"MomentaryButton2"}
+          Value: {"LocaleId":"en-US","Text":"Pulsante impulsivo"}
         - Name: LeftMargin
           Type: BaseVariableType
           DataType: Size
@@ -8790,7 +8790,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"Delayed Button"}
+          Value: {"LocaleId":"en-US","Text":"Pulsante ritardato"}
       - Name: LED1
         Type: Led
         Children:
@@ -8827,7 +8827,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 134.0
+          Value: 128.0
       - Name: DelayedButton1
         Type: DelayedButton
         Children:
@@ -8835,7 +8835,7 @@ Children:
           Type: BaseDataVariableType
           DataType: LocalizedText
           ModellingRule: Optional
-          Value: {"LocaleId":"en-US","Text":"DelayedButton1"}
+          Value: {"LocaleId":"en-US","Text":"Pulsante ritardato"}
         - Name: LeftMargin
           Type: BaseVariableType
           DataType: Size
@@ -8845,7 +8845,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 44.0
+          Value: 42.0
         - Name: Width
           Type: BaseVariableType
           DataType: Size
@@ -9286,7 +9286,7 @@ Children:
           Type: BaseVariableType
           DataType: Size
           ModellingRule: Optional
-          Value: 204.0
+          Value: 198.0
         - Name: Label1
           Type: Label
           Children:
@@ -9294,7 +9294,7 @@ Children:
             Type: BaseDataVariableType
             DataType: LocalizedText
             ModellingRule: Optional
-            Value: {"LocaleId":"en-US","Text":"Delay Time"}
+            Value: {"LocaleId":"en-US","Text":"Tempo ritardo"}
           - Name: TextVerticalAlignment
             Type: BaseVariableType
             DataType: TextVerticalAlignment
