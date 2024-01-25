@@ -365,7 +365,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 270.0
+      Value: 250.0
     - Name: AcknowledgeButton
       Type: Button
       Children:
@@ -2302,7 +2302,7 @@ Children:
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 300.0
+      Value: 280.0
     - Name: AlarmEventsLogger
       Type: Alias
       DataType: NodeId
@@ -3688,6 +3688,16 @@ Children:
           Type: DynamicLink
           DataType: NodePath
           Value: "{Session}/IsNative"
+      - Name: HorizontalAlignment
+        Type: BaseVariableType
+        DataType: HorizontalAlignment
+        ModellingRule: Optional
+        Value: 2
+      - Name: TextHorizontalAlignment
+        Type: BaseVariableType
+        DataType: TextHorizontalAlignment
+        ModellingRule: Optional
+        Value: 1
     - Name: Label1
       Type: Label
       Children:
