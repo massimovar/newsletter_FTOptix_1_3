@@ -1651,16 +1651,26 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 70.0
+      - Name: RightMargin
+        Type: BaseVariableType
+        DataType: Size
+        ModellingRule: Optional
+        Value: 20.0
     - Name: TopMargin
       Type: BaseVariableType
       DataType: Size
       ModellingRule: Optional
-      Value: 190.0
+      Value: 220.0
     - Name: HorizontalAlignment
       Type: BaseVariableType
       DataType: HorizontalAlignment
       ModellingRule: Optional
       Value: 3
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
   - Name: VerticalLayout1
     Type: ColumnLayout
     Children:
@@ -1755,6 +1765,16 @@ Children:
         DataType: LocalizedText
         ModellingRule: Optional
         Value: {"LocaleId":"en-US","Text":"Soglia allarme basso-basso: -100"}
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: TopMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 12.0
   - Name: AlarmHistoryGrid1
     Type: DataGrid
     WriteMask: BrowseName|DataType|Description|DisplayName|MinimumSamplingInterval|UserAccessLevel
@@ -2345,6 +2365,16 @@ Children:
       DataType: Duration
       ModellingRule: Optional
       Value: "0:00:00:1.0000000"
+    - Name: LeftMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
+    - Name: RightMargin
+      Type: BaseVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 20.0
 - Name: Responsivity
   Id: g=33c9ba063dbda70f0bad3d01e371cf1c
   Supertype: Screen
@@ -3641,6 +3671,23 @@ Children:
       DataType: VerticalAlignment
       ModellingRule: Optional
       Value: 2
+    - Name: Label4
+      Type: Label
+      Children:
+      - Name: Text
+        Type: BaseDataVariableType
+        DataType: LocalizedText
+        ModellingRule: Optional
+        Value: {"LocaleId":"en-US","Text":"Apri il browser puntando a http://localhost:8080 per visualizzare il tuo IP"}
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/IsNative"
     - Name: Label1
       Type: Label
       Children:
@@ -3692,16 +3739,20 @@ Children:
         DataType: TextHorizontalAlignment
         ModellingRule: Optional
         Value: 1
-      - Name: BottomMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 50.0
       - Name: Style
         Type: BaseDataVariableType
         DataType: String
         ModellingRule: Optional
         Value: "Default"
+      - Name: Visible
+        Type: BaseDataVariableType
+        DataType: Boolean
+        Value: true
+        Children:
+        - Name: DynamicLink
+          Type: DynamicLink
+          DataType: NodePath
+          Value: "{Session}/IsWeb"
     - Name: Label2
       Type: Label
       Children:
@@ -3842,11 +3893,6 @@ Children:
                 DataType: String
                 ModellingRule: None
                 Value: "GreenLabel"
-      - Name: BottomMargin
-        Type: BaseVariableType
-        DataType: Size
-        ModellingRule: Optional
-        Value: 50.0
     - Name: Label3
       Type: Label
       Children:
@@ -3973,6 +4019,11 @@ Children:
                 Type: BaseDataVariableType
                 DataType: String
                 Value: "GreenLabel"
+    - Name: VerticalGap
+      Type: BaseDataVariableType
+      DataType: Size
+      ModellingRule: Optional
+      Value: 50.0
 - Name: Stylesheet
   Id: g=0aae79401360e2fca21f4f8e555fef82
   Supertype: Screen
@@ -6794,7 +6845,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1.0
+        Value: 0.0
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -7404,6 +7455,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 5.0
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#f7f7f7"
     - Name: Like_Function
       Type: Rectangle
       Children:
@@ -7421,7 +7477,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1.0
+        Value: 0.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -7674,6 +7730,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 5.0
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#f7f7f7"
     - Name: IsEmpty_Function
       Type: Rectangle
       Children:
@@ -7691,7 +7752,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1.0
+        Value: 0.0
       - Name: LeftMargin
         Type: BaseVariableType
         DataType: Size
@@ -7903,6 +7964,11 @@ Children:
         DataType: Size
         ModellingRule: Optional
         Value: 5.0
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#f7f7f7"
     - Name: VerticalGap
       Type: BaseDataVariableType
       DataType: Size
@@ -7953,7 +8019,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1.0
+        Value: 0.0
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -8178,6 +8244,11 @@ Children:
           DataType: UInt32
           ModellingRule: Optional
           Value: 100
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#f7f7f7"
     - Name: MomentaryButtonPage
       Type: Rectangle
       Children:
@@ -8195,7 +8266,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1.0
+        Value: 0.0
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -8745,6 +8816,11 @@ Children:
               Type: PropertyType
               DataType: UInt16
               Value: 0
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#f7f7f7"
     - Name: DelayedButton
       Type: Rectangle
       Children:
@@ -8762,7 +8838,7 @@ Children:
         Type: BaseDataVariableType
         DataType: Size
         ModellingRule: Optional
-        Value: 1.0
+        Value: 0.0
       - Name: HorizontalAlignment
         Type: BaseVariableType
         DataType: HorizontalAlignment
@@ -9328,6 +9404,11 @@ Children:
             DataType: Size
             ModellingRule: Optional
             Value: 20.0
+      - Name: FillColor
+        Type: BaseDataVariableType
+        DataType: Color
+        ModellingRule: Optional
+        Value: "#f7f7f7"
 - Name: Users_Roles
   Id: g=344573f8d17936a6d92966d26c0ca45f
   Supertype: Screen
